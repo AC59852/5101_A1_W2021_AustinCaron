@@ -17,7 +17,7 @@ namespace _5101_A1_W2021.Controllers
         }
     }
 
-    public class SquareController : ApiController
+    public class SquaredController : ApiController
     {
         public int GET(int id)
         {
@@ -29,6 +29,12 @@ namespace _5101_A1_W2021.Controllers
 
     public class GreetingController : ApiController
     {
+        /// <summary>
+        /// Returns "Hello World" when hitting this route.
+        /// If a number is entered, it returns "Greetings to NUMBER people!"
+        /// </summary>
+        /// <param name="id">The input number</param>
+        
         public string GET()
         {
             return "Hello World!";
@@ -44,7 +50,13 @@ namespace _5101_A1_W2021.Controllers
     {
         public int GET(int id)
         {
-            // perform 4 different mathematical operations, starting with the id
+            /// <summary>
+            /// Returns an input number that has gone through 4 different mathematical operations:
+            /// Addition, division, subtraction, multiplication
+            /// </summary>
+            /// <param name="id">The input number</param>
+            /// <returns>The final number after completing math</returns
+            
             int addition = id + 6;
             int division = addition / 4;
             int subtraction = division - 2;
