@@ -55,7 +55,7 @@ namespace _5101_A1_W2021.Controllers
             /// Addition, division, subtraction, multiplication
             /// </summary>
             /// <param name="id">The input number</param>
-            /// <returns>The final number after completing math</returns
+            /// <returns>The final number after completing math</returns>
             
             int addition = id + 6;
             int division = addition / 4;
@@ -66,6 +66,22 @@ namespace _5101_A1_W2021.Controllers
             int total = multiplication;
 
             return total;
+        }
+    }
+
+    public class HostingCostController : ApiController
+    {
+        public IEnumerable<string> GET(int id)
+        {
+            
+            int baseCost = (int)5.50;
+            int hst = (int)0.13;
+            int fortnight = 7;
+            int weeks = id / fortnight;
+
+            string costInWeeks = weeks + "fortnights at $5.50/FN = " + baseCost * weeks;
+
+            return new string[] { costInWeeks };
         }
     }
 }
