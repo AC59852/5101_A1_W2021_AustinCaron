@@ -17,7 +17,7 @@ namespace _5101_A1_W2021.Controllers
         }
     }
 
-    public class SquaredController : ApiController
+    public class SquareController : ApiController
     {
         public int GET(int id)
         {
